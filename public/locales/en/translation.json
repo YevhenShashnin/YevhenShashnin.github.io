@@ -1,0 +1,35 @@
+{
+  "common": {
+    "creator": "Creator:",
+    "allCreators": "All Creators"
+
+  },
+  "dashboard": {
+    "timeRange": "Time Range:",
+    "earningType": "Earning Type:",
+    "earningSummary": "Earning Summary",
+    "earningTooltip": "An overview of total earnings based on your managed Creators during this period",
+    "totalEarnings": "Total Earnings",
+    "subscriptions": "Subscriptions",
+    "tips": "Tips",
+    "posts": "Posts",
+    "refs": "Referrals",
+    "messages": "Messages",
+    "streams": "Streams",
+    "earningTrends": "Earning Trends",
+    "earningTrendsTooltip": "Sales growth and trends of all earnings from your managed Creators",
+    "earningByChannels": "Earning by Channels",
+    "earningByChannelsTooltip": "Track trends and growth of your managed Creators’ earning channels"
+  },
+  "calendar": {
+    "last24h": "Last 24 hours",
+    "yesterday": "Yesterday",
+    "last7d": "Last 7 days",
+    "thisWeek": "This week",
+    "lastWeek": "Last week",
+    "thisMonth": "This month",
+    "lastMonth": "Last month",
+    "last30d": "Last 30 days",
+    "allTime": "All time"
+  }
+}

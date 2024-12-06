@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/fanat/card";
+import { Label } from "@/components/ui/fanat/label";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import { useTranslation } from "react-i18next";
 import { debounce } from "@/utils/debounce";
 import axiosInstance from "@/utils/axiosInstance";

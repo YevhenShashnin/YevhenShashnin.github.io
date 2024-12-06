@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import LoginForm from "@/modules/Auth/components/LoginForm";
 import SignUpForm from "@/modules/Auth/components/SignUpForm";
 import { useTranslation } from "react-i18next";

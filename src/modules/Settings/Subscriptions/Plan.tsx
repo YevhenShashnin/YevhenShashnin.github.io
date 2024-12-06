@@ -1,7 +1,7 @@
 import React from "react";
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/fanat/card";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import axiosInstance from "@/utils/axiosInstance";
 import { format } from "date-fns";
 

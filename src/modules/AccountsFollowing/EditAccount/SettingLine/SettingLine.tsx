@@ -1,7 +1,7 @@
 import React from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/fanat/label";
+import { Button } from "@/components/ui/fanat/button";
 import { useTranslation } from "react-i18next";
 import { ListOrdered, CirclePlus, Pencil, OctagonX } from "lucide-react";
 

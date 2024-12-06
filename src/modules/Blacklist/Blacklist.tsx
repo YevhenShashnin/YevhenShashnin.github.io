@@ -2,7 +2,7 @@ import React from "react";
 import { ColumnDef } from "@tanstack/react-table";
 import { ROUTES } from "@/constants/routes";
 import { apiRoutes, apiRoutesSuperAdmin } from "@/constants/apiRoutes";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import { ArrowUpDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PageWithTable from "@/modules/shared/PageWithTable/PageWithTable";

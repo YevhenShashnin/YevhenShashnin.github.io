@@ -2,7 +2,6 @@
   "common": {
     "creator": "Creator:",
     "allCreators": "All Creators"
-
   },
   "dashboard": {
     "timeRange": "Time Range:",
@@ -19,7 +18,15 @@
     "earningTrends": "Earning Trends",
     "earningTrendsTooltip": "Sales growth and trends of all earnings from your managed Creators",
     "earningByChannels": "Earning by Channels",
-    "earningByChannelsTooltip": "Track trends and growth of your managed Creators’ earning channels"
+    "earningByChannelsTooltip": "Track trends and growth of your managed Creators’ earning channels",
+    "creatorStats": "Creator Statistics",
+    "creators": "Creators",
+    "creatorsTooltip": "An overview of the number of Creators you are managing",
+    "messageEarnings": "Message Earnings",
+    "messageEarningsTooltip": "Total earnings from messages sent by your managed Creators",
+    "totalEarningsTooltip": "Total earnings from all channels of your managed Creators",
+    "refunded": "Refunded",
+    "refundedTooltip": "Total amount refunded to subscribers"
   },
   "calendar": {
     "last24h": "Last 24 hours",
@@ -31,5 +38,14 @@
     "lastMonth": "Last month",
     "last30d": "Last 30 days",
     "allTime": "All time"
+  },
+  "accounts": {
+    "creator": "Creator",
+    "subscription": "Subscription",
+    "tips": "Tips",
+    "message": "Messages",
+    "totalEarnings": "Total Earnings",
+    "totalActiveFans": "Total Active Fans",
+    "expired": "Expired"
   }
 }

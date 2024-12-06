@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import { DataTable } from "@/components/DataTable/DataTable";
 import { MyPagination } from "../Pagination";
 import { useNavigate, useParams } from "react-router-dom";

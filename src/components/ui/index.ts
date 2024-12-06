@@ -1,2 +1,2 @@
 export { Loader } from "./loader";
-export { MultipleSelect } from "./multiple-select";
+export { MultipleSelect } from "./fanat/multiple-select";

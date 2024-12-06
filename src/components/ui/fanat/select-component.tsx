@@ -22,8 +22,8 @@ interface SelectComponentProps {
         onChange: (value: string) => void;
     };
     fieldData: {
-        id: string;
-        placeholderKey: string;
+        id?: string;
+        placeholderKey?: string;
         options: Option[];
     };
     defaultValue?: string;

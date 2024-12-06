@@ -4,7 +4,7 @@ import * as React from "react";
 import { forwardRef, useEffect } from "react";
 
 import { Badge } from "@/components/ui/badge";
-import { Command, CommandGroup, CommandItem, CommandList } from "./command";
+import { Command, CommandGroup, CommandItem, CommandList } from "../command";
 import { cn } from "@/lib/utils";
 
 export interface Option {

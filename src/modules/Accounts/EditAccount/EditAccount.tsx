@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Label } from "@/components/ui/label";
+import { Label } from "@/components/ui/fanat/label";
 import { Input } from "@/components/ui/input";
 import { useTranslation } from "react-i18next";
 import SettingLine from "@/modules/Accounts/EditAccount/SettingLine/SettingLine";
@@ -8,7 +8,7 @@ import {
     CardContent,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/fanat/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
     CircleUser,
@@ -22,7 +22,7 @@ import {
     Pin,
     ListOrdered, Info,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import axiosInstance from "@/utils/axiosInstance";
 import { useNavigate, useParams } from "react-router-dom";
 import { apiRoutes, apiRoutesSuperAdmin } from "@/constants/apiRoutes";
@@ -30,7 +30,7 @@ import { Loader, MultipleSelect } from "@/components/ui";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SelectComponent } from "@/components/ui/select-component";
+import { SelectComponent } from "@/components/ui/fanat/select-component";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { SettingsOptionEnum } from "@/modules/Accounts/enums";
 import EditModal from "@/modules/Accounts/EditAccount/EditModal";

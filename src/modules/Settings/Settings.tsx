@@ -15,7 +15,7 @@ import {
 } from "@tanstack/react-table"
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/fanat/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import {
     DropdownMenu,
@@ -34,7 +34,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/fanat/table"
 
 const data: Payment[] = [
     {

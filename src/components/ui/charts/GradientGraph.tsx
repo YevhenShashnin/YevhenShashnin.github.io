@@ -8,7 +8,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/fanat/card";
 import {
     ChartConfig,
     ChartContainer,
@@ -16,7 +16,7 @@ import {
     ChartLegendContent,
     ChartTooltip,
     ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "@/components/ui/fanat/chart";
 import { useTranslation } from "react-i18next";
 import * as React from "react";
 

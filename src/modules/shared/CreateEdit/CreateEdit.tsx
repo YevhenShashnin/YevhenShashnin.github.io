@@ -1,7 +1,7 @@
 import React, { ReactElement, forwardRef, useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import { Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { clsx } from "clsx";
@@ -22,7 +22,7 @@ import EmojiPicker from "emoji-picker-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Theme } from "emoji-picker-react";
 import { Loader, MultipleSelect } from "@/components/ui";
-import { SelectComponent } from "@/components/ui/select-component";
+import { SelectComponent } from "@/components/ui/fanat/select-component";
 import { BaseRoute } from "@/constants/apiRoutes";
 
 export interface Field {

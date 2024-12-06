@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Loader } from "@/components/ui";
 import { apiRoutes, apiRoutesSuperAdmin } from "@/constants/apiRoutes";
 import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import { useNavigate } from "react-router-dom";
 
 const AccountItem = () => {

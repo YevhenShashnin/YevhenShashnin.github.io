@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
-import Layout from "@/layouts/Layout";
+import Layout_ from "@/layouts/Layout_";
 import { useUserStore } from "@/store/userStore";
 import useTokenRefresh from "@/hooks/useTokenRefresh";
 import { useEffect } from "react";
@@ -27,9 +27,9 @@ const PrivateRoutes = () => {
 
     return (
         authToken ?
-            (<Layout>
+            (<Layout_>
                 <Outlet />
-            </Layout>) :
+            </Layout_>) :
             <Navigate to="/login" />
     );
 };

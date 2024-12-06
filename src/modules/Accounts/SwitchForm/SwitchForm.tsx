@@ -4,8 +4,8 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { SelectComponent } from "@/components/ui/select-component";
+import { Button } from "@/components/ui/fanat/button";
+import { SelectComponent } from "@/components/ui/fanat/select-component";
 import axiosInstance from "@/utils/axiosInstance";
 import { apiRoutes } from "@/constants/apiRoutes";
 import {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import LanguageAndThemeToggle from "@/components/LanguageAndThemeToggle";
-import { Label } from "@/components/ui/label";
+import { Label } from "@/components/ui/fanat/label";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/fanat/card";
 import { useTranslation } from "react-i18next";
 import axiosInstance from "@/utils/axiosInstance";
 import { useNavigate } from "react-router-dom";

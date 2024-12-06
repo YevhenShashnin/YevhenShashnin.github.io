@@ -5,7 +5,7 @@ import axiosInstance from "@/utils/axiosInstance";
 import { Link } from "react-router-dom";
 import { Loader } from "@/components/ui";
 import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import { useNavigate } from "react-router-dom";
 import { apiRoutes, apiRoutesSuperAdmin } from "@/constants/apiRoutes";
 

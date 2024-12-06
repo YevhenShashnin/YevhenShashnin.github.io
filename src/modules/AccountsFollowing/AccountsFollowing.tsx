@@ -10,7 +10,7 @@ import SwitchForm from "@/modules/AccountsFollowing/SwitchForm/SwitchForm";
 import { Badge } from "@/components/ui/badge";
 import { badgeClass } from "@/constants/badgeClass";
 import { useUserStore } from "@/store/userStore";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import { ArrowUpDown } from "lucide-react";
 
 interface AccountsFollowingProps {

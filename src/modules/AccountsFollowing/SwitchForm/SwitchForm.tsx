@@ -4,7 +4,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/fanat/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import {
@@ -18,8 +18,8 @@ import {
 import axiosInstance from "@/utils/axiosInstance";
 import { apiRoutes } from "@/constants/apiRoutes";
 import { MultipleSelect } from "@/components/ui";
-import { Label } from "@/components/ui/label";
-import { SelectComponent } from "@/components/ui/select-component";
+import { Label } from "@/components/ui/fanat/label";
+import { SelectComponent } from "@/components/ui/fanat/select-component";
 
 interface SwitchFormProps {
     open: boolean;

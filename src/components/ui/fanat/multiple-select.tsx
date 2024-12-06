@@ -1,4 +1,4 @@
-import MultipleSelector, { Option } from "@/components/ui/multiple-selector";
+import MultipleSelector, { Option } from "@/components/ui/fanat/multiple-selector";
 import React, { forwardRef } from "react";
 
 interface MultipleSelectProps {

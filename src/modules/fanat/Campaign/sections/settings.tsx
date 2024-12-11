@@ -26,7 +26,7 @@ export const Settings = () => {
     });
     const {t} = useTranslation();
     return (
-        <Card className="px-5 py-5 col-span-4 flex gap-2">
+        <Card className="px-5 py-5 col-span-4 flex flex-wrap gap-2">
             <div className="flex flex-col gap-2 w-[50%]">
                 <Label
                     htmlFor="campaign"

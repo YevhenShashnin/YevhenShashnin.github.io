@@ -62,7 +62,7 @@ export const EarningChannels = () => {
             <CardContent className='grid grid-cols-4 gap-10'>
 
 
-                <ChartContainer className='col-span-3' config={chartConfig2}>
+                <ChartContainer className='col-span-4 md:col-span-3' config={chartConfig2}>
                     <LineChart
                         accessibilityLayer
                         data={chartData2}
@@ -108,7 +108,7 @@ export const EarningChannels = () => {
                         ))}
                     </LineChart>
                 </ChartContainer>
-                <div className="flex flex-col h-full gap-4 justify-center">
+                <div className="col-span-4 md:col-span-1 flex flex-col h-full gap-4 justify-center">
                     <ChartContainer
                         config={chartConfig2}
                         className="mx-auto aspect-square h-[200px]"

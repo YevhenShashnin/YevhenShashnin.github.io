@@ -24,7 +24,7 @@ export const Earnings = () => {
                 {t('dashboard.earningSummary')}
                 <InfoTooltip tooltipText='dashboard.earningTooltip' />
             </CardTitle>
-            <CardContent className="grid grid-cols-4 p-0">
+            <CardContent className="grid grid-cols-1 md:grid-cols-4 p-0">
                 <div className="flex flex-col p-5 gap-4 border-r">
                     <OnlyFans className="w-10 h-10" />
                     <p className="text-[12px]">{t('dashboard.totalEarnings')}</p>

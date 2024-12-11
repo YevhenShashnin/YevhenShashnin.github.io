@@ -10,7 +10,7 @@ export const Totals = () => {
 
     return (
         <Card className="px-5 py-5 col-span-4 gap-2">
-            <CardContent className="grid grid-cols-4 p-0">
+            <CardContent className="grid grid-cols-1 md:grid-cols-4 p-0">
                 <div className="flex flex-col p-5 gap-4 border-r">
                     <p className='text-[24px] font-bold'>{t('campaign.totalClaims')}</p>
                     <p className='text-[36px]'>475</p>

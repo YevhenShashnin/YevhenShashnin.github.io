@@ -21,7 +21,7 @@ function App() {
             {/*        </Routes>*/}
             {/*    </ErrorBoundary>*/}
             {/*</Router>*/}
-            <button onClick={() => setShowDashboard((prev) => !prev)}>Toggle</button>
+            <button className='mb-2' onClick={() => setShowDashboard((prev) => !prev)}>Toggle</button>
             {showDashboard ? <Dashboard/> : <Campaign/>}
         </Layout_>
     </ThemeProvider>;

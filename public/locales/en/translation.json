@@ -1,10 +1,10 @@
 {
   "common": {
     "creator": "Creator:",
-    "allCreators": "All Creators"
+    "allCreators": "All Creators",
+    "timeRange": "Time Range:"
   },
   "dashboard": {
-    "timeRange": "Time Range:",
     "earningType": "Earning Type:",
     "earningSummary": "Earning Summary",
     "earningTooltip": "An overview of total earnings based on your managed Creators during this period",
@@ -47,5 +47,30 @@
     "totalEarnings": "Total Earnings",
     "totalActiveFans": "Total Active Fans",
     "expired": "Expired"
+  },
+  "campaign": {
+    "showExpired": "Show Expired",
+    "totalClaims": "Total Claims",
+    "totalEarnings": "Total Earnings",
+    "totalSpent": "Total Spent",
+    "avgARPF": "Avg ARPF",
+    "avgARPFTooltip": "Average Revenue Per Fan: The average revenue per fan, calculated by dividing the total earnings by the number of fans",
+    "label": "Campaign",
+    "labelTooltip": "The name of the campaign",
+    "status": "Status",
+    "price": "Price",
+    "duration": "Duration",
+    "uses": "Uses",
+    "usesTooltip": "The number of times the campaign has been claimed",
+    "earnings": "Earnings",
+    "countSubscribers": "Count Subscribers",
+    "type": "Type",
+    "typeTooltip": "The type of the campaign",
+    "filterPlaceholder": "Search by label",
+    "affiliate": "Affiliate",
+    "affiliateTooltip": "The affiliate of the campaign",
+    "profit": "Profit",
+    "costEarnings": "Cost",
+    "revenue": "Revenue"
   }
 }

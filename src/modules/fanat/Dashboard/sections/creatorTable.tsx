@@ -20,6 +20,7 @@ import { Card } from "@/components/ui/fanat/card";
 import { Button } from "@/components/ui/fanat/button";
 import { ArrowUpDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import {MyPagination} from "@/modules/shared/Pagination";
 
 // Mock data for creators
 const creators = [
@@ -237,6 +238,7 @@ export const CreatorStats = () => {
                     ))}
                 </TableBody>
             </Table>
+
         </Card>
     );
 };

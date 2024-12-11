@@ -11,7 +11,7 @@ import {
 import {clsx} from "clsx";
 import {useTranslation} from "react-i18next";
 
-interface Option {
+export interface Option {
     id: string;
     value: string;
     label: string;
@@ -33,7 +33,7 @@ const SelectComponent = forwardRef<HTMLSelectElement, SelectComponentProps>(({fi
     const {t} = useTranslation();
     return (
         <Select {...field} ref={ref} onValueChange={field?.onChange} defaultValue={defaultValue}>
-            <SelectTrigger className={clsx("mt-2 ")}>
+            <SelectTrigger className={clsx(" ")}>
                 <SelectValue id={fieldData?.id} placeholder={t(fieldData?.placeholderKey)}/>
             </SelectTrigger>
             <SelectContent>

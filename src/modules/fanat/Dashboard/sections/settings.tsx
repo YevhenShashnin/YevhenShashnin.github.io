@@ -41,10 +41,10 @@ export const Settings = () => {
                 />
             </div>
             <div className="flex flex-col gap-2">
-                <Label>{t('dashboard.timeRange')}</Label>
+                <Label>{t('common.timeRange')}</Label>
                 <DatePickerWithRange_ date={date} setDate={setDate}/>
             </div>
-            <div className="flex flex-col ">
+            <div className="flex flex-col gap-2">
                 <Label>{t('dashboard.earningType')}</Label>
                 <SelectComponent
                     field={{

@@ -22,8 +22,8 @@ function Layout_({ children }: LayoutProps) {
         `}
             >
                 <h1 className="text-[36px] font-bold">FANAT</h1>
-                <p>link</p>
-                <p>one more link</p>
+                <a href='/' className="block mt-4">Dashboard</a>
+                <a href='/campaign' className="block mt-4">Campaign</a>
             </div>
 
             <main

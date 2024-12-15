@@ -11,7 +11,9 @@ import Campaign from "@/modules/fanat/Campaign/Campaign";
 function App() {
     const [showDashboard, setShowDashboard] = React.useState(true);
     return <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <Layout_>
+        <Layout_
+            onClick={ setShowDashboard}
+        >
             {/*<Router>*/}
             {/*    <ErrorBoundary>*/}
             {/*        <Routes>*/}
@@ -21,7 +23,6 @@ function App() {
             {/*        </Routes>*/}
             {/*    </ErrorBoundary>*/}
             {/*</Router>*/}
-            <button className='mb-2' onClick={() => setShowDashboard((prev) => !prev)}>Toggle</button>
             {showDashboard ? <Dashboard/> : <Campaign/>}
         </Layout_>
     </ThemeProvider>;

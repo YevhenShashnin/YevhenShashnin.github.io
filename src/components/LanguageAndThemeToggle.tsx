@@ -2,7 +2,7 @@ import React from "react";
 import {ModeToggle} from "@/components/mode-toggle";
 import {LanguageSelector} from "@/components/LanguageSelector";
 import {clsx} from "clsx";
-import {CircleUserRound} from "lucide-react";
+import {CircleUserRound, Menu} from "lucide-react";
 import {
     Popover,
     PopoverContent,
@@ -36,7 +36,10 @@ const LanguageAndThemeToggle = ({setShowSidebar, className, auth}: Props) => {
     return (
         <div className='flex justify-between mb-4'>
             <Button className="" onClick={setShowSidebar}>
-                Menu
+                <span className='hidden sm:block'>
+                    Menu
+                </span>
+                <Menu className='sm:hidden'/>
             </Button>
             <div className={clsx(" flex right-4 top-4 items-center gap-2", className && className)}>
                 <ModeToggle/>

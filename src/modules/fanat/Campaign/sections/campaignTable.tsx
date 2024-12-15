@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
     ColumnDef,
     useReactTable,
@@ -404,8 +404,10 @@ export const CampaignTable = () => {
                 <TableHeader className="bg-background">
                     {table.getHeaderGroups().map((headerGroup) => (
                         <TableRow key={headerGroup.id}>
-                            {headerGroup.headers.map((header) => (
-                                <TableHead key={header.id}>
+                            {headerGroup.headers.map((header, index) => (
+                                <TableHead
+                                    className={  index === 0 ? "sticky left-0 z-10 bg-background" : ""}
+                                    key={header.id}>
                                     {header.isPlaceholder
                                         ? null
                                         : flexRender(
@@ -420,8 +422,10 @@ export const CampaignTable = () => {
                 <TableBody>
                     {table.getRowModel().rows.map((row) => (
                         <TableRow key={row.id}>
-                            {row.getVisibleCells().map((cell) => (
-                                <TableCell key={cell.id}>
+                            {row.getVisibleCells().map((cell, index) => (
+                                <TableCell
+                                    className={  index === 0 ? "sticky left-0 z-10 bg-card" : ""}
+                                    key={cell.id}>
                                     {flexRender(
                                         cell.column.columnDef.cell,
                                         cell.getContext()

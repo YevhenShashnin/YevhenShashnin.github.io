@@ -16,10 +16,10 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/fanat/table";
-import { Card } from "@/components/ui/fanat/card";
-import { Button } from "@/components/ui/fanat/button";
-import { ArrowUpDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import {Card} from "@/components/ui/fanat/card";
+import {Button} from "@/components/ui/fanat/button";
+import {ArrowUpDown} from "lucide-react";
+import {useTranslation} from "react-i18next";
 import {MyPagination} from "@/modules/shared/Pagination";
 
 // Mock data for creators
@@ -71,7 +71,7 @@ const creators = [
 ];
 
 export const CreatorStats = () => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
 
     // State to track sorting
     const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -80,70 +80,70 @@ export const CreatorStats = () => {
     const columns: ColumnDef<typeof creators[0]>[] = [
         {
             accessorKey: "creator",
-            header: ({ column }) => (
+            header: ({column}) => (
                 <Button
                     className="px-1"
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
                     {t("accounts.creator")}
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                    <ArrowUpDown className="ml-2 h-4 w-4"/>
                 </Button>
             ),
             cell: (info) => info.getValue(),
         },
         {
             accessorKey: "subscription",
-            header: ({ column }) => (
+            header: ({column}) => (
                 <Button
                     className="px-1"
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
                     {t("accounts.subscription")}
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                    <ArrowUpDown className="ml-2 h-4 w-4"/>
                 </Button>
             ),
             cell: (info) => info.getValue(),
         },
         {
             accessorKey: "tips",
-            header: ({ column }) => (
+            header: ({column}) => (
                 <Button
                     className="px-1"
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
                     {t("accounts.tips")}
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                    <ArrowUpDown className="ml-2 h-4 w-4"/>
                 </Button>
             ),
             cell: (info) => info.getValue(),
         },
         {
             accessorKey: "message",
-            header: ({ column }) => (
+            header: ({column}) => (
                 <Button
                     className="px-1"
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
                     {t("accounts.message")}
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                    <ArrowUpDown className="ml-2 h-4 w-4"/>
                 </Button>
             ),
             cell: (info) => info.getValue(),
         },
         {
             accessorKey: "totalEarnings",
-            header: ({ column }) => (
+            header: ({column}) => (
                 <Button
                     className="px-1"
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
                     {t("accounts.totalEarnings")}
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                    <ArrowUpDown className="ml-2 h-4 w-4"/>
                 </Button>
             ),
             cell: (info) => {
@@ -157,14 +157,14 @@ export const CreatorStats = () => {
         },
         {
             accessorKey: "totalActiveFans",
-            header: ({ column }) => (
+            header: ({column}) => (
                 <Button
                     className="px-1"
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
                     {t("accounts.totalActiveFans")}
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                    <ArrowUpDown className="ml-2 h-4 w-4"/>
                 </Button>
             ),
             cell: (info) => {
@@ -178,14 +178,14 @@ export const CreatorStats = () => {
         },
         {
             accessorKey: "expired",
-            header: ({ column }) => (
+            header: ({column}) => (
                 <Button
                     className="px-1"
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
                     {t("accounts.expired")}
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                    <ArrowUpDown className="ml-2 h-4 w-4"/>
                 </Button>
             ),
             cell: (info) => info.getValue(),
@@ -210,8 +210,10 @@ export const CreatorStats = () => {
                 <TableHeader className="bg-background">
                     {table.getHeaderGroups().map((headerGroup) => (
                         <TableRow key={headerGroup.id}>
-                            {headerGroup.headers.map((header) => (
-                                <TableHead key={header.id}>
+                            {headerGroup.headers.map((header, index) => (
+                                <TableHead
+                                    className={index === 0 ? "sticky left-0 z-10 bg-background" : ""}
+                                    key={header.id}>
                                     {header.isPlaceholder
                                         ? null
                                         : flexRender(
@@ -226,8 +228,10 @@ export const CreatorStats = () => {
                 <TableBody>
                     {table.getRowModel().rows.map((row) => (
                         <TableRow key={row.id}>
-                            {row.getVisibleCells().map((cell) => (
-                                <TableCell key={cell.id}>
+                            {row.getVisibleCells().map((cell, index) => (
+                                <TableCell
+                                    className={index === 0 ? "sticky left-0 z-10 bg-card" : ""}
+                                    key={cell.id}>
                                     {flexRender(
                                         cell.column.columnDef.cell,
                                         cell.getContext()

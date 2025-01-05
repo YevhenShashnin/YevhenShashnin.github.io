@@ -2,7 +2,23 @@
   "common": {
     "creator": "Creator:",
     "allCreators": "All Creators",
-    "timeRange": "Time Range:"
+    "timeRange": "Time Range:",
+    "date": "Date",
+    "creators": "Creators",
+    "length": "Length",
+    "count": "Count",
+    "content": "Content",
+    "schedule": "Schedule",
+    "comment": "Comment",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "actionDuration": "Action Duration",
+    "repeatTimes": "Repeat Times",
+    "pinToTimeLine": "Pin to Timeline",
+    "pinPlace": "Pin Place",
+    "status": "Status",
+    "add": "Add",
+    "add&addNew": "Add & Add New"
   },
   "dashboard": {
     "earningType": "Earning Type:",
@@ -97,9 +113,13 @@
     "reposts": "Reposts",
     "messages": "Messages",
     "workforce": "Workforce",
-    "automation":  "Automation",
+    "automation": "Automation",
     "help": "Help",
     "settings": "Settings",
     "billing": "Billing"
+  },
+  "post": {
+    "permanent": "Permanent Post",
+    "post": "Post"
   }
 }

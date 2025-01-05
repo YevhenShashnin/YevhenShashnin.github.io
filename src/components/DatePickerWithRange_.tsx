@@ -1,32 +1,33 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { format } from "date-fns";
-import { Calendar as CalendarIcon } from "lucide-react";
-import { DateRange } from "react-day-picker";
+import * as React from 'react';
+import { format } from 'date-fns';
+import { Calendar as CalendarIcon } from 'lucide-react';
+import { DateRange } from 'react-day-picker';
 
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/fanat/button";
-import { Calendar } from "@/components/ui/calendar";
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/fanat/button';
+import { Calendar } from '@/components/ui/calendar';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from "@/components/ui/popover";
-import { useTranslation } from "react-i18next";
-import { enUS, de, ru, es, fr, uk } from "date-fns/locale";
-import { calendarOptionsEnum } from "@/constants/enums";
+} from '@/components/ui/popover';
+import { useTranslation } from 'react-i18next';
+import { enUS, de, ru, es, fr, uk } from 'date-fns/locale';
+import { calendarOptionsEnum } from '@/constants/enums';
 
-
-interface DatePickerWithRangeProps extends React.HTMLAttributes<HTMLDivElement> {
+interface DatePickerWithRangeProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     date: DateRange | undefined;
     setDate: (date: DateRange | undefined) => void;
-
 }
 
 // Import locale objects from date-fns
-type LocaleKey = "en" | "de" | "ru" | "es" | "fr" | "uk";
+type LocaleKey = 'en' | 'de' | 'ru' | 'es' | 'fr' | 'uk';
 
 // Mapping of language codes to date-fns locale objects
 const localeMap = {
@@ -40,50 +41,55 @@ const localeMap = {
 
 const buttons = [
     {
-        label: "calendar.last24h",
+        label: 'calendar.last24h',
         value: calendarOptionsEnum.LAST_24H,
     },
     {
-        label: "calendar.yesterday",
+        label: 'calendar.yesterday',
         value: calendarOptionsEnum.YESTERDAY,
     },
     {
-        label: "calendar.last7d",
+        label: 'calendar.last7d',
         value: calendarOptionsEnum.LAST_7_DAYS,
     },
     {
-        label: "calendar.thisWeek",
+        label: 'calendar.thisWeek',
         value: calendarOptionsEnum.THIS_WEEK,
     },
     {
-        label: "calendar.lastWeek",
+        label: 'calendar.lastWeek',
         value: calendarOptionsEnum.LAST_WEEK,
     },
     {
-        label: "calendar.thisMonth",
+        label: 'calendar.thisMonth',
         value: calendarOptionsEnum.THIS_MONTH,
     },
     {
-        label: "calendar.lastMonth",
+        label: 'calendar.lastMonth',
         value: calendarOptionsEnum.LAST_MONTH,
     },
     {
-        label: "calendar.last30d",
+        label: 'calendar.last30d',
         value: calendarOptionsEnum.LAST_30_DAYS,
     },
     {
-        label: "calendar.allTime",
+        label: 'calendar.allTime',
         value: calendarOptionsEnum.ALL_TIME,
     },
 ];
 
-
 export function DatePickerWithRange_({
-                                        className,
-                                        date,
-                                        setDate,
-                                    }: DatePickerWithRangeProps) {
+    className,
+    date,
+    setDate,
+}: DatePickerWithRangeProps) {
     const { i18n, t } = useTranslation();
+    const [numberOfMonths, setNumberOfMonths] = React.useState(2);
+    const isMobile = useMediaQuery("(max-width: 768px)");
+
+    React.useEffect(() => {
+        setNumberOfMonths(isMobile ? 1 : 2);
+    }, [isMobile]);
     const dateFnsLocale = localeMap[i18n.language as LocaleKey] || enUS;
     const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
 
@@ -99,19 +105,27 @@ export function DatePickerWithRange_({
                 break;
             case calendarOptionsEnum.YESTERDAY:
                 setDate({
-                    from: new Date(new Date().setDate(new Date().getDate() - 1)),
+                    from: new Date(
+                        new Date().setDate(new Date().getDate() - 1)
+                    ),
                     to: new Date(new Date().setDate(new Date().getDate() - 1)),
                 });
                 break;
             case calendarOptionsEnum.LAST_7_DAYS:
                 setDate({
-                    from: new Date(new Date().setDate(new Date().getDate() - 7)),
+                    from: new Date(
+                        new Date().setDate(new Date().getDate() - 7)
+                    ),
                     to: new Date(),
                 });
                 break;
             case calendarOptionsEnum.THIS_WEEK:
                 const dayOfWeek = today.getDay();
-                const startOfWeek = new Date(today.setDate(today.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1)));
+                const startOfWeek = new Date(
+                    today.setDate(
+                        today.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1)
+                    )
+                );
                 setDate({
                     from: startOfWeek,
                     to: today,
@@ -120,7 +134,9 @@ export function DatePickerWithRange_({
             case calendarOptionsEnum.LAST_WEEK:
                 const currentDay = today.getDay();
                 const startOfThisWeek = new Date(today);
-                startOfThisWeek.setDate(today.getDate() - currentDay + (currentDay === 0 ? -6 : 1));
+                startOfThisWeek.setDate(
+                    today.getDate() - currentDay + (currentDay === 0 ? -6 : 1)
+                );
                 let startDate = new Date(startOfThisWeek);
                 startDate.setDate(startOfThisWeek.getDate() - 7);
                 let endDate = new Date(startOfThisWeek);
@@ -132,19 +148,33 @@ export function DatePickerWithRange_({
                 break;
             case calendarOptionsEnum.THIS_MONTH:
                 setDate({
-                    from: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+                    from: new Date(
+                        new Date().getFullYear(),
+                        new Date().getMonth(),
+                        1
+                    ),
                     to: new Date(),
                 });
                 break;
             case calendarOptionsEnum.LAST_MONTH:
                 setDate({
-                    from: new Date(new Date().getFullYear(), new Date().getMonth() - 1, 1),
-                    to: new Date(new Date().getFullYear(), new Date().getMonth(), 0),
+                    from: new Date(
+                        new Date().getFullYear(),
+                        new Date().getMonth() - 1,
+                        1
+                    ),
+                    to: new Date(
+                        new Date().getFullYear(),
+                        new Date().getMonth(),
+                        0
+                    ),
                 });
                 break;
             case calendarOptionsEnum.LAST_30_DAYS:
                 setDate({
-                    from: new Date(new Date().setDate(new Date().getDate() - 30)),
+                    from: new Date(
+                        new Date().setDate(new Date().getDate() - 30)
+                    ),
                     to: new Date(),
                 });
                 break;
@@ -160,37 +190,53 @@ export function DatePickerWithRange_({
         togglePopover();
     };
     return (
-        <div className={cn("grid gap-2", className)}>
+        <div className={cn('grid gap-2', className)}>
             <Popover open={isPopoverOpen} onOpenChange={togglePopover}>
                 <PopoverTrigger asChild>
                     <Button
                         id="date"
-                        variant={"outline"}
+                        variant={'outline'}
                         className={cn(
-                            "w-[300px] justify-start text-left font-normal",
-                            !date && "text-muted-foreground",
+                            'w-full  justify-center text-left font-normal',
+                            !date && 'text-muted-foreground'
                         )}
                     >
                         <CalendarIcon className="mr-2 h-4 w-4" />
                         {date?.from ? (
                             date.to ? (
                                 <>
-                                    {format(date.from, "LLL dd, y", { locale: dateFnsLocale })} -{" "}
-                                    {format(date.to, "LLL dd, y", { locale: dateFnsLocale })}
+                                    {format(date.from, 'LLL dd, y', {
+                                        locale: dateFnsLocale,
+                                    })}{' '}
+                                    -{' '}
+                                    {format(date.to, 'LLL dd, y', {
+                                        locale: dateFnsLocale,
+                                    })}
                                 </>
                             ) : (
-                                format(date.from, "LLL dd, y", { locale: dateFnsLocale })
+                                format(date.from, 'LLL dd, y', {
+                                    locale: dateFnsLocale,
+                                })
                             )
                         ) : (
                             <span>Pick a date</span>
                         )}
                     </Button>
                 </PopoverTrigger>
-                <PopoverContent className="w-auto p-0 flex flex-col sm:flex-row items-center" align="start">
-                    <div className="flex flex-col p-3">
+                <PopoverContent
+                    className="w-auto p-0 flex flex-col sm:flex-row items-center"
+                    align="start"
+                >
+                    <div className="sm:flex flex-col p-3 hidden">
                         {buttons.map((button, index) => (
-                            <Button className="text-sm font-normal py-0 px-0 h-8" variant="ghost" key={button.label}
-                                    onClick={() => manualCalenarHandler(button.value)}>
+                            <Button
+                                className="text-sm font-normal py-0 px-0 h-8"
+                                variant="ghost"
+                                key={button.label}
+                                onClick={() =>
+                                    manualCalenarHandler(button.value)
+                                }
+                            >
                                 {t(button.label)}
                             </Button>
                         ))}
@@ -201,7 +247,7 @@ export function DatePickerWithRange_({
                         defaultMonth={date?.from}
                         selected={date}
                         onSelect={setDate}
-                        numberOfMonths={2}
+                        numberOfMonths={numberOfMonths}
                         locale={dateFnsLocale}
                         disabled={{
                             after: new Date(),

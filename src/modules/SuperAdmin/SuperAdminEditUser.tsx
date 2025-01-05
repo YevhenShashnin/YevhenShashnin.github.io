@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/fanat/tabs";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/fanat/button";
 import { ArrowLeft } from "lucide-react";

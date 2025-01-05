@@ -71,6 +71,35 @@
     "affiliateTooltip": "The affiliate of the campaign",
     "profit": "Profit",
     "costEarnings": "Cost",
-    "revenue": "Revenue"
+    "revenue": "Revenue",
+    "campaignUrl": "Share"
+  },
+  "campaignLink": {
+    "account": "Account",
+    "label": "Label",
+    "link": "Link",
+    "created": "Created",
+    "subscribersCount": "Subscribers Count",
+    "subscribers": "Subscribers",
+    "revenue": "Revenue",
+    "campaignDetails": "Campaign Details"
+  },
+  "sidebar": {
+    "general": "General",
+    "dashboard": "Dashboard",
+    "creators": "Creators",
+    "plans": "Plans",
+    "campaigns": "Campaigns",
+    "fans": "Fans",
+    "outreach": "Outreach HUB",
+    "stories": "Stories",
+    "posts": "Posts",
+    "reposts": "Reposts",
+    "messages": "Messages",
+    "workforce": "Workforce",
+    "automation":  "Automation",
+    "help": "Help",
+    "settings": "Settings",
+    "billing": "Billing"
   }
 }

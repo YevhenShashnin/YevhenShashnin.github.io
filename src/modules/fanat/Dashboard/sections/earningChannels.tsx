@@ -59,10 +59,8 @@ export const EarningChannels = () => {
                 {t('dashboard.earningByChannels')}
                 <InfoTooltip tooltipText={'dashboard.earningByChannelsTooltip'}/>
             </CardTitle>
-            <CardContent className='grid grid-cols-4 gap-10'>
-
-
-                <ChartContainer className='col-span-4 md:col-span-3' config={chartConfig2}>
+            <CardContent className='pt-3 px-0 grid grid-cols-4 gap-10'>
+                <ChartContainer className='col-span-4 md:col-span-3 ' config={chartConfig2}>
                     <LineChart
                         accessibilityLayer
                         data={chartData2}

@@ -120,7 +120,7 @@ export const EarningTrends = () => {
                 {t('dashboard.earningTrends')}
                 <InfoTooltip tooltipText={'dashboard.earningTrendsTooltip'}/>
             </CardTitle>
-            <CardContent className='pt-5'>
+            <CardContent className='pt-5 px-0'>
                 <ChartContainer
                     config={chartConfig}
                     className="aspect-auto h-[250px] w-full"
